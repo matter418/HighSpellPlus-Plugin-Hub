@@ -19885,6 +19885,10 @@ var HighSpellTCG = class _HighSpellTCG extends bi {
     this.username = null;
     this.styleEl = null;
     this.menuIconRegistered = false;
+    // start()/stop() are not idempotent (overlay, HUD, timers), and the client can
+    // call start() on an already running plugin — e.g. a Plugin Hub install starts
+    // it, then the enable toggle starts it again. Guard both ends.
+    this.started = false;
     this.startupTimer = null;
     this.xpTimer = null;
     /** Bumped on every loadSave start and on stop(); an in-flight async load
@@ -20092,6 +20096,11 @@ var HighSpellTCG = class _HighSpellTCG extends bi {
     this.log("Initialized");
   }
   start() {
+    if (this.started) {
+      this.warn("start() called while already running \u2014 ignored");
+      return;
+    }
+    this.started = true;
     this.log("Started");
     this.migrateRenamedData();
     this.syncExclusionsVisibility();
@@ -20190,6 +20199,8 @@ var HighSpellTCG = class _HighSpellTCG extends bi {
     this.waitForPlayerThenLoad();
   }
   stop() {
+    if (!this.started) return;
+    this.started = false;
     this.log("Stopped");
     this.loadGen++;
     if (this.startupTimer !== null) clearInterval(this.startupTimer);
