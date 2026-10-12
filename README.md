@@ -39,13 +39,12 @@ optional `"asset"` field to a different path inside this repo to override that.
 
 ## Plugins
 
-| Plugin | Source |
-|---|---|
-| Quick Deposit | https://github.com/matter418/QuickDeposit |
-| Quick Drop | https://github.com/matter418/QuickDrop |
-| Tile Markers | https://github.com/matter418/TileMarkers |
-| Chat+ | https://github.com/matter418/ChatPlus |
-| HighSpell TCG | https://github.com/matter418/HighspellTCG |
+`manifest.json` lists the matter418 plugins plus the third-party plugins that were available
+for this client before it had its own hub (Bank Tabs, Idle Alert, Experience Tracker, and so
+on). Every entry's `repository_owner` / `repository_name` points at that plugin's own source
+repository, and its bundle is the exact file (same sha) its author released. Third-party
+bundles are stored under their display name (for example `plugins/BankTabs.js`) via the
+`asset` field, because several of them come from one shared repository.
 
 ## License
 

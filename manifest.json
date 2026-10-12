@@ -5,7 +5,7 @@
     "asset_sha": "sha256:d788ec4d292196512c052677cc7d0fd504efd37305f29aa8b85e5a322b6a01e4",
     "display_name": "Quick Deposit",
     "display_author": "matter",
-    "display_description": "Skip the right-click menu in bank and crafting interfaces — configure left-click to do a chosen amount."
+    "display_description": "Skip the right-click menu in bank and crafting interfaces â€” configure left-click to do a chosen amount."
   },
   {
     "repository_owner": "matter418",
@@ -38,5 +38,329 @@
     "display_name": "HighSpell TCG",
     "display_author": "matter",
     "display_description": "A trading card game for High Spell: earn credits by playing, open packs, and collect cards for every item and creature in the game."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:d24983cece1c9cdff529c0187ff4fe29322d296745897e981be8708bf4db140b",
+    "asset": "plugins/BankTabs.js",
+    "display_name": "Bank Tabs",
+    "display_author": "0rangeYouGlad",
+    "display_description": "Bank Tabs! Check the settings to enable customization."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "ChatEnhancer",
+    "asset_sha": "sha256:ee1f9cfcc87fdd62087f2d389fa977cfa39c804ec52bd9ffe2177bf024e0ac33",
+    "asset": "plugins/ChatEnhancer.js",
+    "display_name": "Chat Enhancer",
+    "display_author": "JayArrowz/Tomb",
+    "display_description": "Makes the chat look a bit prettier."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "Chat-Item-Tooltip",
+    "asset_sha": "sha256:9ecc706dbe19d3a7785ef5f736a92c794a7abe74ad1dd3783242de655be6277a",
+    "asset": "plugins/ChatItemTooltip.js",
+    "display_name": "Chat Item Tooltip",
+    "display_author": "JayArrowz/Tomb",
+    "display_description": "Adds in ability to share items via chat."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:045c541b7b9ad008ec244d78e3e0147c0a7784a02bc4b1f01f86c02ed0ea3955",
+    "asset": "plugins/ClanTags.js",
+    "display_name": "Clan Tags",
+    "display_author": "0rangeYouGlad",
+    "display_description": "Tags for clans that display in chat and player nameplates. Appears as the 'Player Tagger' plugin in the side panel."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:cec5375c9816227d0452052ddd05e36e45595125b8cd690b52c0429d3ab5c37d",
+    "asset": "plugins/CoinCounter.js",
+    "display_name": "Coin Counter",
+    "display_author": "Highl1te",
+    "display_description": "Shows a display of how many coins you have across your bank and inventory."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:50f49074a49bfb5a30f6385b8da6de17063a95f23bf0246825dcd5df5b061d8b",
+    "asset": "plugins/ContextMenuOptions.js",
+    "display_name": "Context Menu Options",
+    "display_author": "Highl1te",
+    "display_description": "Allows you to change the priority of certain context menu options."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "Current-Status",
+    "asset_sha": "sha256:ff0ac771136674ec14625e39143fb237449c4c15b6f72176f80c5895103b8ff7",
+    "asset": "plugins/CurrentStatus.js",
+    "display_name": "Current Status",
+    "display_author": "Highlite",
+    "display_description": "Shows your characters current status."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:458be3284f64d8a8a59fd012afacf92cb290fec8022a82727642f14895cd76c5",
+    "asset": "plugins/CustomCursors.js",
+    "display_name": "Custom Cursors",
+    "display_author": "0rangeYouGlad",
+    "display_description": "Fancy new cursors, with presets using Highspell icons"
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "definitions-panel",
+    "asset_sha": "sha256:171218e384a1d9c1e191ba33e6dcaa462d4c99aa928236f9c60ed6d4f734795c",
+    "asset": "plugins/DefinitionsPanel.js",
+    "display_name": "Definitions Panel",
+    "display_author": "JayArrowz/Tomb",
+    "display_description": "Allows you to search for any item/npc in the game."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "HL_Plugins",
+    "asset_sha": "sha256:eee2b2388b6a4121bb127e1d8ce6d3c2238cad5be8381fb6fb394285e32f1765",
+    "asset": "plugins/DropLog.js",
+    "display_name": "Drop Log",
+    "display_author": "Tomb/0rangeyouglad",
+    "display_description": "Track the drops you recieve from monsters."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "enhanced-hp-bars",
+    "asset_sha": "sha256:5326f2fcc7361b5e54e1abbd0c38e413659e65ec75a109d22f1f16f655bdf01f",
+    "asset": "plugins/EnhancedHPBars.js",
+    "display_name": "Enhanced HP Bars",
+    "display_author": "Highl1te",
+    "display_description": "Gives slightly nicer HP bars."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "Entity-Highlighter",
+    "asset_sha": "sha256:57a51755745f493502761282e5dd24dfb968547be1eeef3beaff83e5aeab862b",
+    "asset": "plugins/EntityHighlighter.js",
+    "display_name": "Entity Highlighter",
+    "display_author": "Tomb",
+    "display_description": "Puts little tags over the selected entities."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:aead12cef429afb41fff037ae39bd92877ca8b1a90c6a8dd095a989456b0ff8e",
+    "asset": "plugins/ExperienceTracker.js",
+    "display_name": "Experience Tracker",
+    "display_author": "Highl1te",
+    "display_description": "Gives you an estimated XP/Hour for skills you are training alongside Actions left."
+  },
+  {
+    "repository_owner": "valsekamerplant",
+    "repository_name": "extra_info_bar",
+    "asset_sha": "sha256:4cb6aa36d2722d8d7f9bbbbb618404b0c74619e48eb93b1cfc19398e2b061bb2",
+    "asset": "plugins/Extrainfobar.js",
+    "display_name": "Extra info bar",
+    "display_author": "Valse Kamerplant",
+    "display_description": "adds icons with extra info about ammunition and edible buffs with timers"
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:136072603c8ab8f6fd2e30b072bd0cd56bb6c5ed5477fa4614ad4b26279e0587",
+    "asset": "plugins/FPSLimiter.js",
+    "display_name": "FPS Limiter",
+    "display_author": "Highl1te",
+    "display_description": "Allows you to control the FPS of the game so that it doesn't hog system resources."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:70833732d272221c0c0cf47e1e735c220fc1c664fe3d7972c8aadccc7fae9611",
+    "asset": "plugins/HPAlert.js",
+    "display_name": "HP Alert",
+    "display_author": "Highl1te",
+    "display_description": "Allows you to enable notifications and audio alerts for low HP."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "Idle-Alert",
+    "asset_sha": "sha256:b85773bb51005c3d249bd3113b58cebaa5cbea7b678e135d7002ba692538c095",
+    "asset": "plugins/IdleAlert.js",
+    "display_name": "Idle Alert",
+    "display_author": "Highl1te",
+    "display_description": "Alerts you when you are about to go idle."
+  },
+  {
+    "repository_owner": "valsekamerplant",
+    "repository_name": "inventory_tooltips",
+    "asset_sha": "sha256:2f7acd3c4c480486fd6edff42b598fb75bf78c7dd6ca95eb3aecabb577a4548c",
+    "asset": "plugins/InventoryTooltips.js",
+    "display_name": "Inventory Tooltips",
+    "display_author": "Valse Kamerplant",
+    "display_description": "Adds extra info to inventoy items liek relative stat changes and edible statusses"
+  },
+  {
+    "repository_owner": "BakaZora",
+    "repository_name": "highlite-plugins",
+    "asset_sha": "sha256:2cc81b25741bc45dc8913553d586e28c843c2d7f3ce7f740d5f817d638d6cfd0",
+    "asset": "plugins/IronMode.js",
+    "display_name": "Iron Mode",
+    "display_author": "Zora",
+    "display_description": "See yours and other players iron statuses in the chat, or try playing an iron yourself! Supports Iron, Hardcore, Ultimate, and Group Iron playstyles!"
+  },
+  {
+    "repository_owner": "wienerWizard",
+    "repository_name": "highspell-keep-on-death",
+    "asset_sha": "sha256:24bcc280db343a840a722be57d42bc78fd78b0ba03cc3e8c9ff55b261d9244f2",
+    "asset": "plugins/KeepOnDeath.js",
+    "display_name": "Keep On Death",
+    "display_author": "wienerWizard",
+    "display_description": "Display which items will be kept, dropped, or destroyed when you die"
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:f6487c87b791a4428c26e5c74dde0433508ce3a8b6ef083fadbc06361f2f21cd",
+    "asset": "plugins/MapPlugin.js",
+    "display_name": "Map Plugin",
+    "display_author": "Highl1te",
+    "display_description": "Allows you to open a map (highlite.dev/map) with your position indicated on the map."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "minimap-icons",
+    "asset_sha": "sha256:d51241cf72c6c3eaafc5914556308135a7a9c913c53d891d36b6eb51a41bf73a",
+    "asset": "plugins/MinimapIcons.js",
+    "display_name": "Minimap Icons",
+    "display_author": "JayArrowz/Tomb",
+    "display_description": "Puts icons for things on the minimap."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "minimap-markers",
+    "asset_sha": "sha256:6f5f601ef174a0b1a508933dda911d73d17ae7cf6f00420f79502f5bcf97619e",
+    "asset": "plugins/MinimapMarkers.js",
+    "display_name": "Minimap Markers",
+    "display_author": "JayArrowz/Tomb",
+    "display_description": "Allows you to get an arrow that points to specific coords"
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:e4327adc11be18d326593163d901df95f6bd497400e37b7c720d03ac2fbbf06e",
+    "asset": "plugins/Nameplates.js",
+    "display_name": "Nameplates",
+    "display_author": "Highl1te",
+    "display_description": "Adds customizable overhead nameplates for players, npcs, and ground items."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:6c8b44d7899112eb17e81ba78ae1e87a5a2ff7c9ade2e32583156f199725ca82",
+    "asset": "plugins/PMAlerts.js",
+    "display_name": "PM Alerts",
+    "display_author": "Highl1te",
+    "display_description": "Allows you to recieve notifications and a sound alert whenever a PM is recieved."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:332d7c5c77c9a5c67de541583f462845c14bda2071ab34c2d9799de3fd08d723",
+    "asset": "plugins/QuickActionTooltip.js",
+    "display_name": "Quick-Action Tooltip",
+    "display_author": "0rangeYouGlad",
+    "display_description": "Shows the current quick action (what you're about to click) as a tooltip"
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:9209d408d2e10455ce617448ef5392e32f50dc1a3c346a2847df3990bbf21855",
+    "asset": "plugins/SkillGuideDetails.js",
+    "display_name": "Skill Guide Details",
+    "display_author": "0rangeYouGlad",
+    "display_description": "Improved Skill Guides that show recipes, facilities, tools, XP, and other notes (thanks to JustATextBox, Snakeyes244, and RealSizzler for the help!)"
+  },
+  {
+    "repository_owner": "crispybittie",
+    "repository_name": "SkillOrbs",
+    "asset_sha": "sha256:3d41823e469f96f571795ff9401078a7885ecd6b489f80b970fb6de0537160f8",
+    "asset": "plugins/SkillOrbs.js",
+    "display_name": "Skill Orbs",
+    "display_author": "Ellz",
+    "display_description": "Track your skills and experience directly over the game window!"
+  },
+  {
+    "repository_owner": "ash-of-the-meadow",
+    "repository_name": "Highlite_SpellSound",
+    "asset_sha": "sha256:56b0f97cae7f9c3c3e798a689194f48a24b10f3af46639d60c1b8f6b2efb2031",
+    "asset": "plugins/SpellSound.js",
+    "display_name": "Spell Sound",
+    "display_author": "Bpcooldude",
+    "display_description": "Adds a variety of in-game sounds, effects, and music to liven up the Highspell Experience."
+  },
+  {
+    "repository_owner": "SoggyPiggy",
+    "repository_name": "Highlite-Spell-Tooltips-Plugin",
+    "asset_sha": "sha256:55a6c81fb903e9e525e8daa7e70a67ab278c269c9ffe095c55cfcc99fa1e27cf",
+    "asset": "plugins/SpellTooltips.js",
+    "display_name": "Spell Tooltips",
+    "display_author": "Soggypiggy",
+    "display_description": "Information on hover for spells"
+  },
+  {
+    "repository_owner": "SoggyPiggy",
+    "repository_name": "Highlite-Stat-Bars-Plugin",
+    "asset_sha": "sha256:36f71e333f82a54ebdcfe3fa9faff1d8492a27c99cd43e1f0298e1cc685044b4",
+    "asset": "plugins/StatBars.js",
+    "display_name": "Stat Bars",
+    "display_author": "Soggypiggy",
+    "display_description": "XP progress bars beneath skills in the stats menu"
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:9b07b5d192b674f98061b1c4ac32bf18bb06045d6ae40099b8fb2359ace2502f",
+    "asset": "plugins/TickCounterandMetronome.js",
+    "display_name": "Tick Counter and Metronome",
+    "display_author": "0rangeYouGlad",
+    "display_description": "A simple tick counter and metronome"
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:a839ab2e8498b1d388f478a0377d032965d39c721775a5798648c5affcb0320b",
+    "asset": "plugins/TradeAlerts.js",
+    "display_name": "Trade Alerts",
+    "display_author": "Highl1te",
+    "display_description": "Allows you to recieve notifications and sound alerts whenever a trade request is recieved."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "HL_Plugins",
+    "asset_sha": "sha256:d31bbc7376aae160d185da948e52d7681ec9633c4ed0d37ad3b1100321ca2c04",
+    "asset": "plugins/TreasureSolver.js",
+    "display_name": "Treasure Solver",
+    "display_author": "Highlite",
+    "display_description": "Adds a panel to help solve treasure maps faster."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
+    "asset_sha": "sha256:c8afce9f249296a914e4b76ee90ac274483f2ab438cd94532b859bc688f5f94f",
+    "asset": "plugins/TTSChat.js",
+    "display_name": "TTS Chat",
+    "display_author": "0rangeYouGlad",
+    "display_description": "Text-to-speech for chat. Uses your system's available voice packs."
+  },
+  {
+    "repository_owner": "CodyBrunson",
+    "repository_name": "HL_Plugins",
+    "asset_sha": "sha256:4dc44aa6bb9014c3cde433bdd0ae89e489c49ebfe98ea954b4db0b96001f4138",
+    "asset": "plugins/XPOrb.js",
+    "display_name": "XP Orb",
+    "display_author": "JayArrowz/Tomb",
+    "display_description": "Adds an XP orb with Session & Total XP"
   }
 ]
