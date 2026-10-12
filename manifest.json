@@ -1,0 +1,42 @@
+[
+  {
+    "repository_owner": "matter418",
+    "repository_name": "QuickDeposit",
+    "asset_sha": "sha256:d788ec4d292196512c052677cc7d0fd504efd37305f29aa8b85e5a322b6a01e4",
+    "display_name": "Quick Deposit",
+    "display_author": "matter",
+    "display_description": "Skip the right-click menu in bank and crafting interfaces — configure left-click to do a chosen amount."
+  },
+  {
+    "repository_owner": "matter418",
+    "repository_name": "QuickDrop",
+    "asset_sha": "sha256:6f782e0c4c4f77fa13ce461994e9cb62cce48f1cceac25ef0d000992e9a02079",
+    "display_name": "Quick Drop",
+    "display_author": "matter",
+    "display_description": "Drop an inventory item with a single configurable click (left, right, or shift) instead of the right-click menu."
+  },
+  {
+    "repository_owner": "matter418",
+    "repository_name": "TileMarkers",
+    "asset_sha": "sha256:2de390e3b44185c2b3a640a6c577f1e0a9586f81077c7b0536a4c7c67577d490",
+    "display_name": "Tile Markers",
+    "display_author": "matter",
+    "display_description": "Mark tiles in the world with a colored border and label via shift + right-click. Includes a built-in T3 Maps preset."
+  },
+  {
+    "repository_owner": "matter418",
+    "repository_name": "ChatPlus",
+    "asset_sha": "sha256:56044364d0ba894d09337dfef8fb7883cee81689d59dd5d601ea5115dd4f1ab0",
+    "display_name": "Chat+",
+    "display_author": "matter",
+    "display_description": "Split chat into tabs (All, Local, Global, System, Private) with unread counts, ignore/block/alert-word filters, custom colours, and adjustable size."
+  },
+  {
+    "repository_owner": "matter418",
+    "repository_name": "HighspellTCG",
+    "asset_sha": "sha256:018f6980fd4d9bb87e47b8a3f0182def4c7bcc1455559b57368b507279602fb7",
+    "display_name": "HighSpell TCG",
+    "display_author": "matter",
+    "display_description": "A trading card game for High Spell: earn credits by playing, open packs, and collect cards for every item and creature in the game."
+  }
+]

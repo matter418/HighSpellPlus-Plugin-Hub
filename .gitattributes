@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Bundles are served byte-for-byte from raw.githubusercontent.com; never convert them.
+plugins/* -text
