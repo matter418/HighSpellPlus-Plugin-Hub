@@ -222,6 +222,15 @@
   {
     "repository_owner": "RyeL1te",
     "repository_name": "Plugins",
+    "asset_sha": "sha256:d94cb3356b20fc021b9a9a9d13c30bac4c82756b35ce9066263f6ff7f73b2fdc",
+    "asset": "plugins/Lookup.js",
+    "display_name": "Lookup",
+    "display_author": "Highl1te",
+    "display_description": "Allows you to right click and 'Lookup' items on the HighSpell Wikipedia."
+  },
+  {
+    "repository_owner": "RyeL1te",
+    "repository_name": "Plugins",
     "asset_sha": "sha256:f6487c87b791a4428c26e5c74dde0433508ce3a8b6ef083fadbc06361f2f21cd",
     "asset": "plugins/MapPlugin.js",
     "display_name": "Map Plugin",
