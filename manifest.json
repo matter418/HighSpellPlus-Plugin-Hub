@@ -26,7 +26,7 @@
   {
     "repository_owner": "matter418",
     "repository_name": "ChatPlus",
-    "asset_sha": "sha256:b089f67ef180f74f7dac1a524013caeb7e335e5c088b3f1f3fb6e71447c5b16c",
+    "asset_sha": "sha256:75463fdb3e7300d3a80836998a2f7160269b704d5c0a00e71ea316f4d9237142",
     "display_name": "Chat+",
     "display_author": "matter",
     "display_description": "Split chat into tabs (All, Local, Global, System, Private) with unread counts, ignore/block/alert-word filters, custom colours, and adjustable size."

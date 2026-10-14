@@ -5304,6 +5304,14 @@ var ChatPlus = class extends bi {
       value: true,
       callback: () => this.applyCollapseBtnVisibility()
     };
+    this.settings.lookupInMenu = {
+      text: "Lookup in name menu",
+      description: "Add a 'Lookup' entry to the menu you get by right-clicking a player's name in chat. It opens their HighSpell hiscores page in your browser.",
+      type: dt.checkbox,
+      value: true,
+      callback: () => {
+      }
+    };
     this.settings.customizeHeader = {
       text: "Customize",
       type: dt.info,
@@ -6331,6 +6339,7 @@ var ChatPlus = class extends bi {
   }
   /** If `actions` is a chat name menu, push a "Lookup <name>" action onto it (in place). */
   appendLookupAction(actions) {
+    if (this.settings.lookupInMenu?.value === false) return;
     if (!Array.isArray(actions) || actions.length === 0) return;
     const message = actions.find(
       (a) => typeof a?.Text === "string" && a.Text.startsWith("Message ") && typeof a?.OriginalEventArgs?.Data?.username === "string"
