@@ -26,7 +26,7 @@
   {
     "repository_owner": "matter418",
     "repository_name": "ChatPlus",
-    "asset_sha": "sha256:56044364d0ba894d09337dfef8fb7883cee81689d59dd5d601ea5115dd4f1ab0",
+    "asset_sha": "sha256:b089f67ef180f74f7dac1a524013caeb7e335e5c088b3f1f3fb6e71447c5b16c",
     "display_name": "Chat+",
     "display_author": "matter",
     "display_description": "Split chat into tabs (All, Local, Global, System, Private) with unread counts, ignore/block/alert-word filters, custom colours, and adjustable size."
@@ -38,6 +38,14 @@
     "display_name": "HighSpell TCG",
     "display_author": "matter",
     "display_description": "A trading card game for High Spell: earn credits by playing, open packs, and collect cards for every item and creature in the game."
+  },
+  {
+    "repository_owner": "matter418",
+    "repository_name": "BankPlus",
+    "asset_sha": "sha256:fd7c43931804f958ab7934a71fce20fa4fccf13a5f201fad2ee0dc22affc8ceb",
+    "display_name": "Bank+",
+    "display_author": "matter",
+    "display_description": "A search box in the bank window plus your own named item filters (like Smithing or Potion making), so you can find what you need fast."
   },
   {
     "repository_owner": "RyeL1te",

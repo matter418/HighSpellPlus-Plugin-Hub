@@ -5027,6 +5027,7 @@ var FONT_OPTIONS = Object.keys(FONT_FAMILIES);
 var TABBAR_ID = "chatplus-tabbar";
 var STYLE_ID = "chatplus-style";
 var DRAG_BLOCKER_ID = "chatplus-drag-blocker";
+var HISCORES_URL = "https://highspell.com/hiscores/player/";
 var TAB_MENU_ID = "chatplus-tab-menu";
 var CLEARED_CLASS = "chatplus-cleared";
 var FILTERED_CLASS = "chatplus-filtered";
@@ -5100,6 +5101,11 @@ var ChatPlus = class extends bi {
     // sets the overhead text; wrapped so filtered messages never reach either.
     this.hookedChatMenuProto = null;
     this.origAddChatMessage = null;
+    // ContextMenuController.createDefaultContextMenu — builds the menu shown when a
+    // player's name is right-clicked in chat ("Message / Add / Block ..."); wrapped
+    // to append a "Lookup" entry that opens the player's hiscores page.
+    this.hookedContextMenuProto = null;
+    this.origCreateDefaultContextMenu = null;
     // The game classes may not be exposed yet when we start; poll until they are.
     this.hookRetryTimer = null;
     this.hookRetriesLeft = 0;
@@ -6178,7 +6184,8 @@ var ChatPlus = class extends bi {
   installGameHooks() {
     this.installBlockHook();
     this.installAddChatMessageHook();
-    if (this.hookedChatManagerProto && this.hookedChatMenuProto) {
+    this.installLookupHook();
+    if (this.allGameHooksInstalled()) {
       this.stopHookRetry();
       return;
     }
@@ -6187,16 +6194,20 @@ var ChatPlus = class extends bi {
       this.hookRetryTimer = window.setInterval(() => {
         this.installBlockHook();
         this.installAddChatMessageHook();
-        if (this.hookedChatManagerProto && this.hookedChatMenuProto) {
+        this.installLookupHook();
+        if (this.allGameHooksInstalled()) {
           this.stopHookRetry();
         } else if (--this.hookRetriesLeft <= 0) {
           this.stopHookRetry();
           this.warn(
-            `Could not hook the game's chat classes (ChatManager: ${!!this.hookedChatManagerProto}, ChatMenuController: ${!!this.hookedChatMenuProto}); ignore list will only hide chat lines, not overhead text.`
+            `Could not hook the game's chat classes (ChatManager: ${!!this.hookedChatManagerProto}, ChatMenuController: ${!!this.hookedChatMenuProto}, ContextMenuController: ${!!this.hookedContextMenuProto}); ignore list may only hide chat lines, and the Lookup menu entry may be missing.`
           );
         }
       }, 2e3);
     }
+  }
+  allGameHooksInstalled() {
+    return !!(this.hookedChatManagerProto && this.hookedChatMenuProto && this.hookedContextMenuProto);
   }
   stopHookRetry() {
     if (this.hookRetryTimer !== null) {
@@ -6216,6 +6227,11 @@ var ChatPlus = class extends bi {
     }
     this.hookedChatMenuProto = null;
     this.origAddChatMessage = null;
+    if (this.hookedContextMenuProto && this.origCreateDefaultContextMenu) {
+      this.hookedContextMenuProto.createDefaultContextMenu = this.origCreateDefaultContextMenu;
+    }
+    this.hookedContextMenuProto = null;
+    this.origCreateDefaultContextMenu = null;
   }
   installBlockHook() {
     if (this.hookedChatManagerProto) return;
@@ -6270,6 +6286,74 @@ var ChatPlus = class extends bi {
     this.hookedChatMenuProto = proto;
     this.origAddChatMessage = orig;
     this.log("Hooked ChatMenuController.addChatMessage for filters");
+  }
+  // ------------------------------------------------------------------------
+  // "Lookup" in the chat name menu
+  // ------------------------------------------------------------------------
+  // Right-clicking a name in chat makes the game's ChatMenuController build a
+  // list of custom actions — "Message X", "Add X", "Block X" (and "Moderate X"
+  // for staff) — each a small object with CustomCallback / Text /
+  // OriginalEventArgs, and hand it to
+  // ContextMenuController.createDefaultContextMenu(x, y, actions). We wrap that
+  // call: when the list is a chat name menu (it has a "Message X" entry whose
+  // event args carry the username) we append a "Lookup X" action of the same
+  // class, so it renders and behaves exactly like the game's own entries. The
+  // callback opens the player's hiscores page; the client routes
+  // window.open(..., "_blank") to the OS browser.
+  // ------------------------------------------------------------------------
+  /** The live ContextMenuController instance, via the UI manager the game exposes. */
+  getContextMenuController() {
+    try {
+      const mgr = this.gameHooks?.UIManager?.Manager;
+      return mgr?.getController?.()?.ContextMenuController ?? null;
+    } catch {
+      return null;
+    }
+  }
+  installLookupHook() {
+    if (this.hookedContextMenuProto) return;
+    const ctrl = this.getContextMenuController();
+    if (!ctrl) return;
+    const proto = Object.getPrototypeOf(ctrl);
+    if (!proto || typeof proto.createDefaultContextMenu !== "function") return;
+    const orig = proto.createDefaultContextMenu;
+    const plugin = this;
+    proto.createDefaultContextMenu = function(...args) {
+      try {
+        plugin.appendLookupAction(args[2]);
+      } catch {
+      }
+      return orig.apply(this, args);
+    };
+    this.hookedContextMenuProto = proto;
+    this.origCreateDefaultContextMenu = orig;
+    this.log("Hooked ContextMenuController.createDefaultContextMenu for the Lookup entry");
+  }
+  /** If `actions` is a chat name menu, push a "Lookup <name>" action onto it (in place). */
+  appendLookupAction(actions) {
+    if (!Array.isArray(actions) || actions.length === 0) return;
+    const message = actions.find(
+      (a) => typeof a?.Text === "string" && a.Text.startsWith("Message ") && typeof a?.OriginalEventArgs?.Data?.username === "string"
+    );
+    if (!message) return;
+    if (actions.some((a) => typeof a?.Text === "string" && a.Text.startsWith("Lookup "))) return;
+    const username = message.OriginalEventArgs.Data.username;
+    const displayName = message.Text.slice("Message ".length) || username;
+    const args = message.OriginalEventArgs;
+    const ownArgs = typeof args.cloneWithNewData === "function" ? args.cloneWithNewData(args.Data) : args;
+    const ActionCtor = message.constructor;
+    const plugin = this;
+    const callback = (_item, eventArgs) => {
+      plugin.openHiscores(eventArgs?.Data?.username ?? username);
+    };
+    actions.push(new ActionCtor(callback, "Lookup " + displayName, ownArgs));
+  }
+  /** Open a player's hiscores page in the user's browser. */
+  openHiscores(name) {
+    if (typeof name !== "string") return;
+    const slug = name.trim().toLowerCase();
+    if (!slug) return;
+    window.open(HISCORES_URL + encodeURIComponent(slug), "_blank");
   }
   /** Decide whether a game chat message should be dropped before it renders anywhere. */
   shouldDropGameMessage(args) {
