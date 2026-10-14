@@ -42,7 +42,7 @@
   {
     "repository_owner": "matter418",
     "repository_name": "BankPlus",
-    "asset_sha": "sha256:fd7c43931804f958ab7934a71fce20fa4fccf13a5f201fad2ee0dc22affc8ceb",
+    "asset_sha": "sha256:8cfd84292ce46164fa930d7cf5feabe843933d46615d10ef400f903ab0b6afcd",
     "display_name": "Bank+",
     "display_author": "matter",
     "display_description": "A search box in the bank window plus your own named item filters (like Smithing or Potion making), so you can find what you need fast."
